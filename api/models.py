@@ -8,4 +8,9 @@ class Route(models.Model):
   description = models.TextField(max_length=200)
   # Using JSONfield to make it easier to store path data as an array of obj with text and decimal ints
   path = JSONField()
+  owner = models.ForeignKey('auth.User', related_name='routes', on_delete=models.CASCADE, null=True)
+
+  # save route to owner
+  def save(self, *args, **kwargs):
+    super(Route, self).save(*args, **kwargs)
 
