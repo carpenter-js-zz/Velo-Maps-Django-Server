@@ -14,7 +14,7 @@ class UserSerializer(serializers.ModelSerializer):
 class RouteSerializer(serializers.ModelSerializer):
   owner = serializers.ReadOnlyField(source='owner.username')
 
-  class Meta: 
+  class Meta:
     model = Route
     fields = ('id', 'name', 'path', 'description', 'owner')
 

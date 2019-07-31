@@ -38,7 +38,7 @@ class RouteList(APIView):
           serializer.save()
           return Response(serializer.data, status=status.HTTP_201_CREATED)
       return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-  
+
   def perform_create(self, serializer):
     serializer.save(owner=self.request.user)
 
@@ -102,7 +102,7 @@ class RouteDetail(APIView):
 #     route = Route.objects.get(pk=pk)
 #   except Route.DoesNotExist:
 #     return Response(status=status.HTTP_404_NOT_FOUND)
-  
+
 #   if request.method == 'GET':
 #     serializer = RouteSerializer(route)
 #     return Response(serializer.data)

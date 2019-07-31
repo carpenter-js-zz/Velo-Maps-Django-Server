@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'velomaps',
-        'USER': 'myprojectuser',
+        'USER': 'django',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '',
